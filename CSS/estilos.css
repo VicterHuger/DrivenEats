@@ -1,0 +1,99 @@
+/*font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEEEEE;
+}
+.fonte-Righteous{
+    font-family:'Righteous', cursive;
+}
+header{
+    width:100%;
+    background-color: #CF2B2B;
+    height:92px;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    align-items:  center;
+    padding-left: 5%; /*baseado no figma 5% ~= 20px/414px*100%*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+header>div>h1{
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size:44px;
+    margin-bottom:5px;
+}
+header>div>h3{
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size:18px;
+}
+.conteudo{
+    margin-left:5%;
+    flex-flow:column;
+    margin:92px 0 92px 5%;
+}
+.escolha-prato{
+    margin-top:124px;   
+}
+.escolha-prato,.escolha-bebida,.escolha-sobremesa{
+    margin-bottom:18px;
+}
+h2{
+    color:#333333;
+    font-size:26px;
+    font-weight:400;
+}
+.scroll-horizontal{
+    flex-direction: row;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+    height:auto;
+    margin-bottom:28px;
+}
+.opcoes-pratos,.opcoes-bebidas,.opcoes-sobremesas{
+    display:flex;
+    width: 138%;
+}
+
+.opcoes-pratos>div,.opcoes-bebidas>div,.opcoes-sobremesas>div{
+    width:42%; /*42% aproximação de 172px/414px*/
+    background-color:#FFFFFF;
+    height:216px;
+    border-radius:9px;
+    margin-right:4%; /*4% aproximação de 16/414*/
+}
+.opcoes-sobremesas div{
+    margin-bottom:16px;
+}
+.opcoes-pratos>div:last-child,.opcoes-bebidas>div:last-child,.opcoes-sobremesas>div:last-child{
+    margin-right:5%;
+}
+footer{
+    width:100%;
+    height:92px;
+    background-color:#FFFFFF;
+    position: fixed;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao-fechar-pedido{
+    background-color:#CBCBCB ;
+    border-radius:50px;
+    width:88%; /*aproximação de 364px/414px*100%*/
+    height:61px;
+    border:none;
+    text-align:center;
+}
+.selecionar-pedidos{
+    font-size:20px;
+    color:#FFFFFF
+}
