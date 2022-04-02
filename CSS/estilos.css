@@ -68,6 +68,38 @@ h2{
     height:216px;
     border-radius:9px;
     margin-right:4%; /*4% aproximação de 16/414*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centralizar-produto{
+    width:84%; /*resultado aproximado da razão 144px/172px*/
+    height:100%;
+    padding: 8% 0 6% 0;
+}
+.centralizar-produto>img{
+    width:100%;
+    height:80px;
+    border-radius:4px;
+    object-fit: cover;
+}
+.centralizar-produto>img+h4{
+    font-weight: 700;
+    color:#333333;
+    font-size:16px;
+    margin:8px 0 9px 0;
+}
+.centralizar-produto>h5{
+    font-weight: 300;
+    font-size:15px;
+    color:#A6A6A6;
+    margin-bottom: 5px;
+}
+.preco{
+    font-size:16px;
+    font-weight:400;
+    color:#000000;
+    margin-top: 5px;
 }
 .opcoes-sobremesas div{
     margin-bottom:16px;
