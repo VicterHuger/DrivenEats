@@ -82,10 +82,10 @@ h2{
     padding: 8% 0 6% 0;
 }
 .limite-caracteres{
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
 }
 .centralizar-produto>img{
     width:100%;
@@ -118,16 +118,16 @@ h2{
     margin-right:5%;
 }
 .selecionado-prato,.selecionado-bebida,.selecionado-sobremesa{
-    /*box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;*/
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
     border:5px #32B72F solid;
 }
 ion-icon{
     width: 19px;
     height: 19px;
     position:absolute;
-    color: green;
-    bottom: 5px;
-    right:5px;
+    color: #32B72F;
+    bottom: 14px;
+    right:11px;
 }
 .icone-semclique{
     display:none;
@@ -145,6 +145,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .botao-fechar-pedido{
     background-color:#CBCBCB ;
     border-radius:50px;
@@ -155,5 +160,22 @@ footer{
 }
 .selecionar-pedidos{
     font-size:20px;
-    color:#FFFFFF
+    color:#FFFFFF;
+    inline-size: 55%; /*Aproximdamente o tamanho do texto "Selecione os 3 itens"*/
+}
+.nao-habilitado{
+    display:none;
+}
+.habilitar-botao-pedido{
+    display:flex;
+    background-color:#32B72F;
+}
+.texto-pedido{
+    display:none;
+    font-size:20px;
+    color:#FFFFFF;
+    font-size:700;
+}
+.habilitado{
+    display:flex;
 }
