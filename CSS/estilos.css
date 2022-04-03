@@ -21,6 +21,7 @@ header{
     align-items:  center;
     padding-left: 5%; /*baseado no figma 5% ~= 20px/414px*100%*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 header>div>h1{
     font-weight: 400;
@@ -72,6 +73,8 @@ h2{
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    position:relative;
+
 }
 .centralizar-produto{
     width:84%; /*resultado aproximado da razão 144px/172px*/
@@ -113,6 +116,24 @@ h2{
 }
 .opcoes-pratos>div:last-child,.opcoes-bebidas>div:last-child,.opcoes-sobremesas>div:last-child{
     margin-right:5%;
+}
+.selecionado-prato,.selecionado-bebida,.selecionado-sobremesa{
+    /*box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;*/
+    border:5px #32B72F solid;
+}
+ion-icon{
+    width: 19px;
+    height: 19px;
+    position:absolute;
+    color: green;
+    bottom: 5px;
+    right:5px;
+}
+.icone-semclique{
+    display:none;
+}
+.icone-clicado-prato,.icone-clicado-bebida,.icone-clicado-sobremesa{
+    display:flex;
 }
 footer{
     width:100%;
