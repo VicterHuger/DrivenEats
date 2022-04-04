@@ -59,7 +59,6 @@ function habilitarBotao(){
         document.querySelector(".botao-fechar-pedido").classList.add("habilitar-botao-pedido");
         document.querySelector(".selecionar-pedidos").classList.add("nao-habilitado");
         document.querySelector(".texto-pedido").classList.add("habilitado");
-        //linkWhatsapp();
     }
 }
 //função que devolve o valor do item selecionado dentro do padrão esperado para o texto no whatsapp  

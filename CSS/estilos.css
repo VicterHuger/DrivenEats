@@ -140,7 +140,6 @@ h2{
     display:flex;
     width: 138%;
 }
-
 .opcoes-pratos>div,.opcoes-bebidas>div,.opcoes-sobremesas>div{
     width:42%; /*42% aproximação de 172px/414px*/
     background-color:#FFFFFF;
@@ -270,4 +269,3 @@ button{
 .habilitado{
     display:flex;
 }
-
