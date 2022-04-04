@@ -8,6 +8,80 @@ body{
 .fonte-Righteous{
     font-family:'Righteous', cursive;
 }
+.tela-de-confirmacao{
+    background: rgba(255, 255, 255, 0.9);
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirmacao-do-pedido{
+    position: fixed;
+    top: 124px;
+    left: 4%;
+    z-index: 2;
+    width: 92%;
+    height: 353px;
+    background-color: #50D074;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 18px 25px;
+}
+.confirmacao-do-pedido h3{
+    font-size:22px;
+    color:#FFFFFF;
+}
+.confirmacao-do-pedido>h3{
+    margin-bottom:28px;
+}
+.confirmacao-do-pedido>h3,.total h3,.confirmar-pedido>h3,.cacenlar>h4{
+    font-weight:700;
+}
+.confirmar-pedido>h3{
+    color:#50D074;
+}
+.cancelar h4{
+    font-size: 20px;
+    color:#FFFFFF;
+}
+.inforacoes-dos-pedidos{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.primeira-linha,.segunda-linha,.terceira-linha,.total{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.item-prato,.item-bebida,.item-sobremesa,.total>h3:first-child{
+    text-align: left;
+    margin-bottom:14px;
+}
+.item-prato+h3,.item-bebida+h3,.item-sobremesa+h3,.total>h3:last-child{
+    text-align: right;
+    margin-bottom:14px;
+}
+.confirmar-pedido{
+    width: 100%;
+    height: 52px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    margin-bottom:16px;
+}
 a{
     text-decoration: none;
 }
@@ -59,6 +133,9 @@ h2{
     height:auto;
     margin-bottom:28px;
 }
+.scroll-horizontal::-webkit-scrollbar{
+    display: none;
+  }
 .opcoes-pratos,.opcoes-bebidas,.opcoes-sobremesas{
     display:flex;
     width: 138%;

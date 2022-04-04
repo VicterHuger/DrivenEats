@@ -14,136 +14,167 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            <h1 class="fonte-Righteous">DrivenEats</h1>
-            <h3>Sua comida em 6 minutos</h3>
-        </div>
-    </header>
-    <div class="conteudo">
-        <div class="escolha-prato">
-            <h2 class="fonte-Righteous">Primeiro, seu prato</h2>
-        </div>
-        <div class="scroll-horizontal">
-            <div class="opcoes-pratos" >
-                <div class="prato1 borda-escondida" onclick="selecionarPrato(this); habilitarBotao();">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/poke-vegetariano.jpg" alt="Foto do poke vegetariano. Consta de uma tigela branca com arroz com gergilim negro, rabanete, abrobrinha, cenoura, tofu, edame, manga, couve e abacate dispostos lado a lado dentro da tigela. Além da tigela, há um par de hassi de madeira e uma outra tigela branca menor com abacate e manga"/>
-                        <h4 class="limite-caracteres titulo-do-item">Poke Vegetariano</h4>
-                        <h5 class="limite-caracteres"> Escolha até 8 </h5>
-                        <h5 class="limite-caracteres">acompanhamentos</h5>
-                        <h4 class="preco limite-caracteres">R$ 35,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
-                    </div>   
+    <div class="tela-de-confirmacao nao-habilitado" >
+        <div class="confirmacao-do-pedido">
+            <h3>Confirme seu pedido</h3>
+            <div class="inforacoes-dos-pedidos">
+                <div class="primeira-linha">
+                    <h3 class="item-prato"></h3>
+                    <h3 class="preco-prato"></h3>
                 </div>
-                <div class="prato2 borda-escondida" onclick="selecionarPrato(this); habilitarBotao();">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/Bobo-de-palmito-pupunha.webp" alt="Foto de um Bobó de Palmito Pupunha"/>
-                        <h4 class="limite-caracteres titulo-do-item">Bobó de Palmito </h4>
-                        <h5 class="limite-caracteres"> Acompanhado de </h5> 
-                        <h5 class="limite-caracteres"> arroz e salada</h5>
-                        <h4 class="preco limite-caracteres">R$ 32,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
+                <div class="segunda-linha">
+                    <h3 class="item-bebida"></h3>
+                    <h3 class="preco-bebida"></h3>
+                </div>
+                <div class="terceira-linha">
+                    <h3 class="item-sobremesa"></h3>
+                    <h3 class="preco-sobremesa"></h3>
+                </div>
+                <div class="total">
+                    <h3>TOTAL</h3>
+                    <h3 class="preco-total"></h3>
+                </div>
+            </div>
+            <a class="link-whatsapp" href="" target="_blank" >
+                <buton class="confirmar-pedido">
+                    <h3>Tudo Certo, pode pedir!</h3>
+                </buton>
+            </a>
+            <div class="cancelar" onclick="cancelarPedido()">
+                <h4>Cancelar</h4>
+            </div>
+        </div>
+    </div>
+        <header>
+            <div>
+                <h1 class="fonte-Righteous">DrivenEats</h1>
+                <h3>Sua comida em 6 minutos</h3>
+            </div>
+        </header>
+        <div class="conteudo">
+            <div class="escolha-prato">
+                <h2 class="fonte-Righteous">Primeiro, seu prato</h2>
+            </div>
+            <div class="scroll-horizontal">
+                <div class="opcoes-pratos" >
+                    <div class="prato1 borda-escondida" onclick="selecionarPrato(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/poke-vegetariano.jpg" alt="Foto do poke vegetariano. Consta de uma tigela branca com arroz com gergilim negro, rabanete, abrobrinha, cenoura, tofu, edame, manga, couve e abacate dispostos lado a lado dentro da tigela. Além da tigela, há um par de hassi de madeira e uma outra tigela branca menor com abacate e manga"/>
+                            <h4 class="limite-caracteres titulo-do-item">Poke Vegetariano</h4>
+                            <h5 class="limite-caracteres"> Escolha até 8 </h5>
+                            <h5 class="limite-caracteres">acompanhamentos</h5>
+                            <h4 class="preco limite-caracteres">R$ 35,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
+                        </div>   
                     </div>
-                </div>
-                <div class="prato3 borda-escondida" onclick="selecionarPrato(this); habilitarBotao();">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/feijoada-organica.webp" alt="Foto de uma feijoada vegetariana. Na foto há um suco de laranja, um prato, garfo e faca. No prato, a feijoada está numa tijela, enquanto o arroz, a couve e a quinoa roza estão separadas no prato."/>
-                        <h4 class="limite-caracteres titulo-do-item">Feijoada Orgânica</h4>
-                        <h5 class="limite-caracteres"> Acompanha arroz, </h5> 
-                        <h5 class="limite-caracteres">couve e quinoa</h5>
-                        <h4 class="preco limite-caracteres">R$ 31,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
+                    <div class="prato2 borda-escondida" onclick="selecionarPrato(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/Bobo-de-palmito-pupunha.webp" alt="Foto de um Bobó de Palmito Pupunha"/>
+                            <h4 class="limite-caracteres titulo-do-item">Bobó de Palmito </h4>
+                            <h5 class="limite-caracteres"> Acompanhado de </h5> 
+                            <h5 class="limite-caracteres"> arroz e salada</h5>
+                            <h4 class="preco limite-caracteres">R$ 32,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
+                        </div>
+                    </div>
+                    <div class="prato3 borda-escondida" onclick="selecionarPrato(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/feijoada-organica.webp" alt="Foto de uma feijoada vegetariana. Na foto há um suco de laranja, um prato, garfo e faca. No prato, a feijoada está numa tijela, enquanto o arroz, a couve e a quinoa roza estão separadas no prato."/>
+                            <h4 class="limite-caracteres titulo-do-item">Feijoada Orgânica</h4>
+                            <h5 class="limite-caracteres"> Acompanha arroz, </h5> 
+                            <h5 class="limite-caracteres">couve e quinoa</h5>
+                            <h4 class="preco limite-caracteres">R$ 31,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="escolha-bebida">
-            <h2 class="fonte-Righteous">Agora, sua bebida</h2>
-        </div>
-        <div class="scroll-horizontal">   
-            <div class="opcoes-bebidas">
-                <div class="bebida1 " onclick="selecionarBebiba(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/kombucha-artesanal.jpg" alt="Foto de kombuchas artesanais."/>
-                        <h4 class="limite-caracteres titulo-do-item">Kombucha </h4>
-                        <h5 class="limite-caracteres"> Garrafa de vidro de </h5>
-                        <h5 class="limite-caracteres"> 350ml (Morango)</h5>
-                        <h4 class="preco limite-caracteres">R$ 12,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+            <div class="escolha-bebida">
+                <h2 class="fonte-Righteous">Agora, sua bebida</h2>
+            </div>
+            <div class="scroll-horizontal">   
+                <div class="opcoes-bebidas">
+                    <div class="bebida1 " onclick="selecionarBebiba(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/kombucha-artesanal.jpg" alt="Foto de kombuchas artesanais."/>
+                            <h4 class="limite-caracteres titulo-do-item">Kombucha </h4>
+                            <h5 class="limite-caracteres"> Garrafa de vidro de </h5>
+                            <h5 class="limite-caracteres"> 350ml (Morango)</h5>
+                            <h4 class="preco limite-caracteres">R$ 12,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
+            
                     </div>
-        
-                </div>
-                <div class="bebida2 " onclick="selecionarBebiba(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/cha-mate.jpg" alt="Foto de chá mate"/>
-                        <h4 class="limite-caracteres titulo-do-item">Chá Mate Gelado</h4>
-                        <h5 class="limite-caracteres"> Conteúdo de </h5> 
-                        <h5 class="limite-caracteres"> 350ml </h5>
-                        <h4 class="preco limite-caracteres">R$ 10,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                    <div class="bebida2 " onclick="selecionarBebiba(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/cha-mate.jpg" alt="Foto de chá mate"/>
+                            <h4 class="limite-caracteres titulo-do-item">Chá Mate Gelado</h4>
+                            <h5 class="limite-caracteres"> Conteúdo de </h5> 
+                            <h5 class="limite-caracteres"> 350ml </h5>
+                            <h4 class="preco limite-caracteres">R$ 10,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
-                </div>
-                <div class="bebida3 " onclick="selecionarBebiba(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/pink-lemonade.webp" alt="Foto de Pink Lemonade"/>
-                        <h4 class="limite-caracteres titulo-do-item">Pink Lemonade</h4>
-                        <h5 class="limite-caracteres"> Conteúdo de </h5> 
-                        <h5 class="limite-caracteres"> 350ml </h5>
-                        <h4 class="preco limite-caracteres">R$ 11,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                    <div class="bebida3 " onclick="selecionarBebiba(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/pink-lemonade.webp" alt="Foto de Pink Lemonade"/>
+                            <h4 class="limite-caracteres titulo-do-item">Pink Lemonade</h4>
+                            <h5 class="limite-caracteres"> Conteúdo de </h5> 
+                            <h5 class="limite-caracteres"> 350ml </h5>
+                            <h4 class="preco limite-caracteres">R$ 11,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="escolha-sobremesa" >
-            <h2 class="fonte-Righteous">Por fim, sua sobremesa</h2>
-        </div>
-        <div class="scroll-horizontal">   
-            <div class="opcoes-sobremesas">
-                <div class="sobremesa1" onclick="selecionarSobremesa(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/pave.jpg" alt="Foto de pavê de amendoim"/>
-                        <h4 class="limite-caracteres titulo-do-item">Pavê Amendoim</h4>
-                        <h5 class="limite-caracteres"> Fatia de 150g</h5> 
-                        <h5 class="limite-caracteres"> (Vegano)</h5>
-                        <h4 class="preco limite-caracteres">R$ 15,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+            <div class="escolha-sobremesa" >
+                <h2 class="fonte-Righteous">Por fim, sua sobremesa</h2>
+            </div>
+            <div class="scroll-horizontal">   
+                <div class="opcoes-sobremesas">
+                    <div class="sobremesa1" onclick="selecionarSobremesa(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/pave.jpg" alt="Foto de pavê de amendoim"/>
+                            <h4 class="limite-caracteres titulo-do-item">Pavê Amendoim</h4>
+                            <h5 class="limite-caracteres"> Fatia de 150g</h5> 
+                            <h5 class="limite-caracteres"> (Vegano)</h5>
+                            <h4 class="preco limite-caracteres">R$ 15,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
-                </div>
-                <div class="sobremesa2" onclick="selecionarSobremesa(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/pastel-de-belem.jpg" alt="Foto de torta de pastel de belem"/>
-                        <h4 class="limite-caracteres titulo-do-item">Pastel de Belém</h4>
-                        <h5 class="limite-caracteres"> Fatia de 150g </h5> 
-                        <h5 class="limite-caracteres"> (Vegano)</h5>
-                        <h4 class="preco limite-caracteres">R$ 16,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                    <div class="sobremesa2" onclick="selecionarSobremesa(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/pastel-de-belem.jpg" alt="Foto de torta de pastel de belem"/>
+                            <h4 class="limite-caracteres titulo-do-item">Pastel de Belém</h4>
+                            <h5 class="limite-caracteres"> Fatia de 150g </h5> 
+                            <h5 class="limite-caracteres"> (Vegano)</h5>
+                            <h4 class="preco limite-caracteres">R$ 16,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
-                </div>
-                <div class="sobremesa3" onclick="selecionarSobremesa(this)">
-                    <div class="centralizar-produto">
-                        <img src="/imagens/pudim.jpg" alt="Foto de pudim vegano"/>
-                        <h4 class="limite-caracteres titulo-do-item">Pudim Vegano</h4>
-                        <h5 class="limite-caracteres">  150g</h5> 
-                        <h5 class="limite-caracteres"> (Vegano)</h5>
-                        <h4 class="preco limite-caracteres">R$ 14,00</h4>
-                        <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                    <div class="sobremesa3" onclick="selecionarSobremesa(this)">
+                        <div class="centralizar-produto">
+                            <img src="/imagens/pudim.jpg" alt="Foto de pudim vegano"/>
+                            <h4 class="limite-caracteres titulo-do-item">Pudim Vegano</h4>
+                            <h5 class="limite-caracteres">  150g</h5> 
+                            <h5 class="limite-caracteres"> (Vegano)</h5>
+                            <h4 class="preco limite-caracteres">R$ 14,00</h4>
+                            <ion-icon class="icone-semclique"name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>   
-    <footer class="fechar-pedido">
-        <a class="link-whatsapp" href="" target="_blank" >
-            <button class="botao-fechar-pedido">
-                <h3 class="selecionar-pedidos">Selecione os 3 itens para fechar o pedido</h3>
-                <h3 class="texto-pedido">Fechar Pedido</h3>        
-            </button>
-        </a>
-    </footer>
+        </div>   
+        <footer class="fechar-pedido" >
+                <button class="botao-fechar-pedido" onclick="enderecoConfirmacao()">
+                    <h3 class="selecionar-pedidos">Selecione os 3 itens para fechar o pedido</h3>
+                    <h3 class="texto-pedido">Fechar Pedido</h3>        
+                </button>
+        </footer>    
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
     <script src="/JS/scripts.js"></script>
 </body>
 </html>
+    
+}
