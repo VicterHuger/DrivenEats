@@ -81,7 +81,7 @@ function linkWhatsapp(){
 function enderecoConfirmacao(){
     if(document.querySelector(".botao-fechar-pedido").classList.contains("habilitar-botao-pedido")){
         nome=prompt(`Olá! Já iremos processar seu pedido! Primeiro, nos diga, qual seu nome?`);
-        endereco=prompt(`Certo, ${nome}! Estamos quase lá! Nos diga agora, qual o endereço de entrega do pedido? Escreva no seguinte formato: Rua xxxxxx, nº, complemento, CEP`); 
+        endereco=prompt(`Certo, ${nome}! Estamos quase lá! Nos diga agora, qual o endereço de entrega do pedido? Escreva no seguinte formato: CEP, Rua xxxxxx, nº, complemento`); 
         if(nome && endereco){
             document.querySelector(".tela-de-confirmacao").classList.remove("nao-habilitado");
             let valorprato=valorItem(prato);
